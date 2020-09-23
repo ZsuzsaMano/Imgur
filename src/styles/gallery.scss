@@ -3,6 +3,6 @@
 .gallery{
   display: grid;
   grid-gap: 1em; /* [1] Add some gap between rows and columns */
-  grid-template-columns: repeat( auto-fill, minmax( 300px, 1fr ) ); /* [2] Make columns adjust according to the available viewport */
+  grid-template-columns: repeat( auto-fill, minmax( 400px, 1fr ) ); /* [2] Make columns adjust according to the available viewport */
 
 }

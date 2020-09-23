@@ -1,1 +1,1 @@
-.gallery{display:grid;grid-gap:1em;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr))}.figure{max-width:400px;padding:1em;box-shadow:5px 5px 5px grey}.figure__img{width:100%;object-fit:contain;height:auto}
+.gallery{display:grid;grid-gap:1em;grid-template-columns:repeat(auto-fill, minmax(400px, 1fr))}.figure{max-width:400px;padding:1em;box-shadow:5px 5px 5px grey}.figure__img{width:100%;object-fit:cover;height:auto}form{display:flex;justify-content:space-around;align-items:center;background-color:#fed794;padding:1em}
