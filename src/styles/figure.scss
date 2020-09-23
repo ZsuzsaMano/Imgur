@@ -1,0 +1,12 @@
+// main: style.scss
+
+.figure{
+  max-width: 400px;
+  padding: 1em;
+  box-shadow: 5px 5px 5px grey;
+  &__img{
+    width: 100%;
+    object-fit: contain;
+    height:auto;
+  }
+}

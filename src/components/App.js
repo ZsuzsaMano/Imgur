@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
- import '../styles/App.css';
+ import '../styles/style.min.css';
  import Navbar from './Navbar';
 import Image from './Image';
 
@@ -46,7 +46,7 @@ console.log(data.data[0].images[0].link);
         updateSearch = {updateSearch}/>
 
 
-      <div className="images">
+      <div className="gallery">
 
      {images.map((image, index) =>(
        <Image
