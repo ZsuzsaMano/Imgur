@@ -22,8 +22,8 @@ const getImages = async()=>{
 	}
 });
 const data = await response.json();
-setImages(data);
-console.log(data);
+setImages(data.data);
+console.log(data.data[0].images[0].link);
 };
 
     const updateSearch= e =>{
@@ -35,7 +35,6 @@ console.log(data);
       setQuery(search);
       setSearch('');
     }
-    console.log(images);
 
 
   return (
@@ -49,11 +48,10 @@ console.log(data);
 
       <div className="images">
 
-
-     {images.map((image, index)=>(
-        <Image
+     {images.map((image, index) =>(
+       <Image
                 key={image.id}
-                //image={image.images.link}
+                image = {image.images ? image.images[0].link : ''}
                 title= {image.title}
                 description ={image.description}/>
 
