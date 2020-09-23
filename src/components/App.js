@@ -35,6 +35,7 @@ console.log(data);
       setQuery(search);
       setSearch('');
     }
+    console.log(images);
 
 
   return (
@@ -47,17 +48,18 @@ console.log(data);
 
 
       <div className="images">
-      </div>
-           </div>
 
-     // {images.map((image,index)=>(
-     //    <Image
-     //            key={image.id}
-     //            image={image.images.link}
-     //            title= {image.title}
-     //            description ={image.description}/>
-     //
-     // ))}
+
+     {images.map((image, index)=>(
+        <Image
+                key={image.id}
+                //image={image.images.link}
+                title= {image.title}
+                description ={image.description}/>
+
+     ))}
+     </div>
+          </div>
 
 
 

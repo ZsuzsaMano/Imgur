@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Image = ({key, image, title, description}) =>{
+const Image = ({ key, title, description }) => {
 return(
   <div className="image">
+    <h2>{title}</h2>
+
+    <p>{description}</p>
   </div>
 )
 }
