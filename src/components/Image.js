@@ -7,6 +7,7 @@ return(
     <h3>{title}</h3>
     <img className="figure__img" src={image} alt={title}/>
     <figcaption>{description}</figcaption>
+
   </figure>
 )
 }

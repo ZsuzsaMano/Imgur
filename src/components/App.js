@@ -53,7 +53,8 @@ console.log(data.data[0].images[0].link);
                 key={image.id}
                 image = {image.images ? image.images[0].link : ''}
                 title= {image.title}
-                description ={image.description}/>
+                description ={image.description}
+                />
 
      ))}
      </div>
