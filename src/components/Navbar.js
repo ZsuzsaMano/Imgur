@@ -1,22 +1,17 @@
 import React from 'react';
 
-const Navbar = ({getSearch, search, updateSearch}) => {
-return(
+const Navbar = ({ getSearch, search, updateSearch }) => {
+  return (
   <div className="navbar">
-  <ul>
-  <li>connect form</li>
-  <li>when clicking an image in the gallery - show its details: big image, title, description, upvotes, downvotes and score.</li>
-  </ul>
-
   <form>
   <div className="gallery__section">
-  <input type="radio" id="hot" name="section" value="hot" checked={true}/>
-<label htmlFor="hot">HOT</label><br/>
-<input type="radio" id="top" name="section" value="top"/>
-<label htmlFor="top">TOP</label><br/>
-<input type="radio" id="user" name="section" value="user"/>
-<label htmlFor="user">USER</label>
-</div>
+    <input type="radio" id="hot" name="section" value="hot" checked={true}/>
+    <label htmlFor="hot">HOT</label><br/>
+    <input type="radio" id="top" name="section" value="top"/>
+    <label htmlFor="top">TOP</label><br/>
+    <input type="radio" id="user" name="section" value="user"/>
+    <label htmlFor="user">USER</label>
+  </div>
 
 
 

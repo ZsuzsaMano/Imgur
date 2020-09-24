@@ -6,6 +6,10 @@ import Image from './Image';
 function App() {
 
 const [images, setImages] = useState([]);
+const [section, setSection] = useState('hot');
+const [sort, setSort] = useState('viral');
+const [windowP, setWindowP] = useState('day');
+const [showViral, setShowViral] = useState(true);
 const [search, setSearch] = useState('');
 const [query, setQuery] = useState('top')
 
@@ -13,9 +17,10 @@ useEffect(()=> {
   getImages();
 }, [query]);
 
+/*&mature={{showMature}}&album_previews={{albumPreviews}}*/
 
 const getImages = async()=>{
-  const response = await fetch('https://api.imgur.com/3/gallery/top/top/5/day', {
+  const response = await fetch(`https://api.imgur.com/3/gallery/${section}/${sort}/${window}/5?showViral=${showViral}`, {
 	'method': 'GET',
 	'headers': {
     'Authorization':'Client-ID 5d777ff1d2321c6'
@@ -23,7 +28,7 @@ const getImages = async()=>{
 });
 const data = await response.json();
 setImages(data.data);
-console.log(data.data[0].images[0].link);
+console.log(data.data);
 };
 
     const updateSearch= e =>{
