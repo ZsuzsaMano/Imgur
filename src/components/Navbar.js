@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Navbar = ({ getSearch, search, updateSearch }) => {
+const Navbar = ({ section, sort, windowP, showViral, updateWindowP, updateSort, toggleShowViral, }) => {
   return (
   <div className="navbar">
   <form>
   <div className="gallery__section">
-    <input type="radio" id="hot" name="section" value="hot" checked={true}/>
+    <input type="radio" id="hot" name="section" value="hot" />
     <label htmlFor="hot">HOT</label><br/>
     <input type="radio" id="top" name="section" value="top"/>
     <label htmlFor="top">TOP</label><br/>
@@ -15,10 +15,9 @@ const Navbar = ({ getSearch, search, updateSearch }) => {
 
 
 
-    <div className="form__window">
-        <label htmlFor="window">Window Parameters
-only if  section is top
-  <select /*value={value} onChange={handleChange}*/>
+    <div className={`form__window ${ section === 'top' ? '' : 'display-none'}`}>
+        <label htmlFor="window" >Window Parameters
+  <select value={windowP} onChange={updateWindowP}>
           <option value="day">Day</option>
           <option value="week">Week</option>
           <option value="month">Month</option>
@@ -28,10 +27,9 @@ only if  section is top
         </label>
   </div>
 
-  <div className="form__sort">
+  <div className={`form__sort ${ section === 'user' ? '' : 'display-none'}`}>
   <label htmlFor="sort">Sort
-    only available with user section
-  <select /*value={value} onChange={handleChange}*/>
+  <select value={sort} onChange={updateSort}>
           <option value="viral">Viral</option>
           <option value="top">Top</option>
           <option value="time">Time</option>
@@ -45,9 +43,8 @@ only if  section is top
 
              <input
                      type="checkbox"
-                     /* value={label}
-                     checked={isChecked}
-                      onChange={toggleCheckboxChange} */
+                     checked={showViral}
+                     onChange={toggleShowViral}
                            />
      </label>
    </div>
