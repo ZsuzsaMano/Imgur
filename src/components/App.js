@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 import '../styles/style.min.css';
 import Navbar from './Navbar';
-import Image from './Image';
+import Figure from './Figure';
 
 function App() {
 
@@ -66,7 +66,7 @@ const updateSection = e => {
 
     {
       images.map((image, index) => (
-        <Image key = {image.id}
+        <Figure key = {image.id}
         image = {image.images ? image.images[0].link : ''}
         title = {image.title}
         description = {image.description}
