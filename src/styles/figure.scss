@@ -1,9 +1,13 @@
 // main: style.scss
 
 .figure{
-  max-width: 400px;
+  background-color: #eee;
+ display: inline-block;
+ margin: 0 0 1em;
+ width: 100%;
+  max-width: 300px;
   padding: 1em;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 5px 5px 5px rgba(200,200,200, 0.5);
   &__img{
     width: 100%;
     object-fit: cover;

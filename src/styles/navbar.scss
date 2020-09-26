@@ -2,17 +2,20 @@
 
 form{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(80, 81, 84);
+  background-color: rgb(55, 63, 85);
   padding: 1em;
   color: white;
-  label{
-    padding: 0.5em;
-  }
-  input{
+  font-family: 'Josefin Sans', sans-serif;
+
+  input, option{
     margin: 0.5em;
     padding: 0.3em;
+  }
+  label{
+    padding-right: 3vw;
   }
 }
 
