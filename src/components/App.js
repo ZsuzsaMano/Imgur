@@ -19,18 +19,24 @@ function App() {
     getImages();
   }, [section, sort, windowP, showViral]);
 
-  const updateWindowP = e =>{
-    setWindowP(e.target.value)
-  }
+  const updateWindowP = e => {
+    setWindowP(e.target.value);
+  };
 
-  const updateSort = e =>{
-    setSort(e.target.value)
-  }
+  const updateSort = e => {
+    setSort(e.target.value);
+  };
 
-const toggleShowViral = () => setShowViral(!showViral);
+
+const updateSection = e => {
+    setSection(e.target.value);
+}
+
+
+  const toggleShowViral = () => setShowViral(!showViral);
 
   const getImages = async () => {
-    const response = await fetch(`https://api.imgur.com/3/gallery/${section}/${sort}/${window}/5?showViral=${showViral}`, {
+    const response = await fetch(`https://api.imgur.com/3/gallery/${section}/${sort}/${windowP}/5?showViral=${showViral}`, {
       method: 'GET',
       headers: {
         Authorization: 'Client-ID 5d777ff1d2321c6',
@@ -45,13 +51,15 @@ const toggleShowViral = () => setShowViral(!showViral);
     < div className = "App" >
 
     < Navbar
-        showViral
-        toggleShowViral
-        updateWindowP
-        updateSort
-        section
-        sort
-        windowP/ >
+        updateSection = {updateSection}
+        showViral = {showViral}
+        toggleShowViral = {toggleShowViral}
+        updateWindowP = {updateWindowP}
+        updateSort = {updateSort}
+        section = {section}
+        sort = {sort}
+        windowP = {windowP}
+   / >
 
 
     <div className = "gallery" >
